@@ -9,6 +9,11 @@ pipeline {
 
 
      environment {
+        TFE_NAME = "app.terraform.io"
+        TFE_URL = "https://app.terraform.io"
+        TFE_API_TOKEN = credentials("tfe_api_token")
+        TFE_ORGANIZATION = "learning_jig"
+        TFE_API_URL = "${TFE_URL}/api/v2"
         AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     }
