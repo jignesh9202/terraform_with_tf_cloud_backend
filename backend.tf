@@ -1,5 +1,7 @@
+
 terraform {
-  backend "remote" {
+  cloud {
+   
     organization = "learning_jig"
     hostname = "app.terraform.io"
 
