@@ -15,7 +15,7 @@ data "aws_ami" "linux" {
 }
 
 resource "aws_launch_template" "web" {
-  name_prefix            = "web"
+  name_prefix            = "web-${terraform.workspace}"
   image_id               = data.aws_ami.linux.id
   instance_type          = var.web_instance_type
   vpc_security_group_ids = [var.web_sg]
